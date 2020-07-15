@@ -1,5 +1,6 @@
 import './style.css';
 
+var vConsole = new VConsole();
 var type = "mp4";
 var url = "https://www.w3schools.com/html/mov_bbb." + type;
 var isSoundStatue = true;
@@ -18,11 +19,6 @@ document.body.appendChild(video);
 const txt = document.createElement('p');
 document.body.appendChild(txt);
 
-
-setVideoStatue();
-
-var vConsole = new VConsole();
-
 function setVideoStatue(){
   isSoundStatue = !isSoundStatue;
   txt.innerText = 'Sound : ' + isSoundStatue;
@@ -33,3 +29,5 @@ function setVideoStatue(){
   }
   if(video.readyState) video.play();
 }
+
+setVideoStatue();
